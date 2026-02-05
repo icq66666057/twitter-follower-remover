@@ -17,3 +17,10 @@ Short description...
 
 ## Input format
 (one username per line example)
+
+## Install
+1. Download repo
+2. Open chrome://extensions
+3. Enable Developer mode
+4. Load unpacked
+5. Select project folder

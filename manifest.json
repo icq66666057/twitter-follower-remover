@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Follower Remover",
+  "version": "1.1",
+  "description": "Safely remove selected Twitter followers (auto mode)",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": [
+    "https://twitter.com/*",
+    "https://x.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/*",
+        "https://x.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}

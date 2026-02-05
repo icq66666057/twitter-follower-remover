@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Follower Remover</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 12px;
+      width: 280px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+      background: #0f1419;
+      color: #e7e9ea;
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      height: 110px;
+      background: #16181c;
+      color: #e7e9ea;
+      border: 1px solid #2f3336;
+      border-radius: 8px;
+      padding: 8px;
+      resize: none;
+      font-size: 13px;
+    }
+
+    textarea::placeholder {
+      color: #71767b;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      flex: 1;
+      border: none;
+      border-radius: 9999px;
+      padding: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #start {
+      background: #1d9bf0;
+      color: white;
+    }
+
+    #start:hover {
+      background: #1a8cd8;
+    }
+
+    #stop {
+      background: #2f3336;
+      color: #e7e9ea;
+    }
+
+    #stop:hover {
+      background: #3a3f44;
+    }
+
+    .hint {
+      margin-top: 8px;
+      font-size: 11px;
+      color: #71767b;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h3>Remove followers</h3>
+
+  <textarea
+    id="users"
+    placeholder="one username per line&#10;example:&#10;papapu509"
+  ></textarea>
+
+  <div class="buttons">
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+
+  <div class="hint">
+    Auto mode · limit 40/day
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
